@@ -21,7 +21,7 @@
 
 body {
     background-image: url("../assets/video/background.gif"); /* Define uma imagem de fundo para o corpo */
-    background-size: cover; /* Faz a imagem de fundo cobrir todo o corpo */
+    background-size: contain; /* Faz a imagem de fundo cobrir todo o corpo */
 }
 
 .pixel-rectangle {
@@ -31,7 +31,6 @@ body {
 
 .pixel-rectangle1 {
     display: flex;  /* Define o elemento como um contêiner flexível */
-    justify-content: end;  /* Alinha os itens filhos no início do contêiner flexível (não é uma propriedade válida, pode ser 'flex-start') */
     flex-direction: column;  /* Disposição dos itens filhos em uma coluna (de cima para baixo) */
     width: 200px;  /* Define a largura do elemento como 200 pixels */
     height: 380px;  /* Define a altura do elemento como 400 pixels */
@@ -43,18 +42,6 @@ body {
 
 }
 
-.pixel-rectangle2 {
-    display: flex;  /* Define o elemento como um contêiner flexível */
-    justify-content: top;  /* Alinha os itens filhos no início do contêiner flexível (não é uma propriedade válida, pode ser 'flex-start') */
-    flex-direction: column;  /* Disposição dos itens filhos em uma coluna (de cima para baixo) */
-    width: 200px;  /* Define a largura do elemento como 200 pixels */
-    height: 380px;  /* Define a altura do elemento como 400 pixels */
-    background-color: rgb(148, 65, 225);  /* Define a cor de fundo do elemento */
-    image-rendering: pixelated;  /* Aplica uma renderização pixelada às imagens dentro do elemento */
-    border: 1px solid royalblue;  /* Define uma borda sólida de 1 pixel com cor royalblue */
-    border-radius: 30px;  /* Define bordas arredondadas com um raio de 30 pixels */
-    align-items: center;  /* Alinha os itens filhos no centro horizontalmente */
-}
 
 .tudo {
     display: flex;  /* Define o elemento como um contêiner flexível */
@@ -89,15 +76,6 @@ body {
      border-radius: 5px;  /* Define bordas arredondadas com um raio de 16 pixels */
  }
  
- .tarefas-prontas {
-    
-     text-align: center;  /* Centraliza o texto dentro do elemento */
-     padding: 5px 5px;     /* Define um preenchimento de 0 na parte superior e inferior e 10 pixels nas laterais */
-     align-items: center;  /* Alinha os itens filhos no centro verticalmente */
-     background: orange;  /* Define o fundo do elemento como laranja */
-     border-radius: 5px;  /* Define bordas arredondadas com um raio de 16 pixels */
-     
- }
  
  .botao-adicionar-tarefa {
     border: 2px solid orange;
@@ -109,18 +87,152 @@ body {
      padding: 5px;  /* Define um preenchimento de 5 pixels em todos os lados */
      margin-top: -50px;
      cursor: pointer;  /* Muda o cursor para uma mãozinha quando o mouse está sobre o botão */
+     margin-top: 330px;
  }
 
  .botao-adicionar-tarefa:hover {
     background-color: rgb(255, 194, 81);
  }
  
- .lista-de-tarefas {
-    display: flex;         /* Usa flexbox para o layout do contêiner */
-    flex-direction: column; /* Disposição dos itens em coluna */
-    align-items: center;    /* Centraliza os itens horizontalmente */
+
+ .lista {
+    display: flex;            /* Usa flexbox para o layout do contêiner */
+    flex-direction: column;   /* Disposição dos itens em coluna */
+    align-items: center;      /* Centraliza os itens horizontalmente */
     color: white;
+    margin-top: -350px;
+
  }
+
+ .formulario {
+    display: flex; /* Usar flexbox no corpo */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Usa toda a altura da viewport */
+    margin: 0; /* Remove margens padrão do body */
+ }
+
+ .quadrado {
+    display: flex; /* Define um layout flexível para o menu */
+    flex-direction: column;   /* Disposição dos itens em coluna */
+    gap: 10px;
+    align-items: center;  /* Alinha os itens filhos no centro horizontalmente */
+    text-align: center;  /* Centraliza o texto dentro do elemento */
+    list-style: none;  /* Remove o estilo de lista padrão */
+    width: 250px;  /* Largura do quadrado */
+    height: 100px; /* Altura do quadrado */
+    background-color: orange; /* Cor de fundo amarelo */
+    border-radius: 15px;  /* Define bordas arredondadas com um raio de 30 pixels */
+    margin-left: 600px;
+    margin-top: -300px;
+
+}
+
+.formtitulo {
+    display: flex;  /* Define o elemento como um contêiner flexível */
+    align-items: center;  /* Alinha os itens filhos no centro verticalmente */
+    color: blueviolet;
+    
+}
+
+.titulo-form {
+    display: flex;  /* Define o elemento como um contêiner flexível */
+    color: rgb(0, 0, 0);
+}
+
+.botao-de-ok {
+    border: 2px solid blanchedalmond;
+     display: flex;  /* Define o elemento como um contêiner flexível */
+     background: none;  /* Define o fundo do elemento como laranja */
+     border-radius: 5px;  /* Define bordas arredondadas com um raio de 16 pixels */
+     padding: 5px 30px;  /* Define um preenchimento de 5 pixels em todos os lados */
+     cursor: pointer;  /* Muda o cursor para uma mãozinha quando o mouse está sobre o botão */
+}
+
+.botao-de-ok:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+#formularioid {
+    display: none;
+}
+
+.remover {
+     background: orange;  /* Define o fundo do elemento como laranja */
+     border: 2px solid orange;
+     cursor: pointer;  /* Muda o cursor para uma mãozinha quando o mouse está sobre o botão */
+     padding: 0 5px;  /* Define um preenchimento de 5 pixels em todos os lados */
+     border-radius: 15px;
+     border: 1px solid royalblue;  /* Define uma borda sólida de 1 pixel com cor royalblue */
+}
+
+.alterar {
+    background: orange;  /* Define o fundo do elemento como laranja */
+     border: 2px solid orange;
+     cursor: pointer;  /* Muda o cursor para uma mãozinha quando o mouse está sobre o botão */
+     padding: 0 5px;  /* Define um preenchimento de 5 pixels em todos os lados */
+     border-radius: 15px;
+     border: 1px solid royalblue;  /* Define uma borda sólida de 1 pixel com cor royalblue */
+}
+.lista-de-tarefas {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.234); 
+   
+}
+ 
+.li1 {
+   display: flex;
+   gap: 5px;
+
+  
+}
+
+.li2 {
+    display: flex;
+   gap: 5px;
+}
+
+.li3 {
+    display: flex;
+   gap: 5px;
+}
+
+.li4 {
+    display: flex;
+   gap: 5px;
+}
+
+.li5 {
+    display: flex;
+   gap: 5px;
+    display: none;
+}
+
+.li6 {
+    display: flex;
+   gap: 5px;
+    display: none;
+}
+
+.li7 {
+    display: flex;
+   gap: 5px;
+    display: none;
+}
+
+.li8 {
+    display: flex;
+   gap: 5px;
+    display: none;
+}
+
+.li9 {
+    display: flex;
+   gap: 5px;
+    display: none;
+}
+
 
 
  @media (max-width: 720px) {
